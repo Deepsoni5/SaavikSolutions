@@ -1,17 +1,29 @@
-import Link from "next/link"
-import { MapPin, Phone, Mail, Clock, Linkedin, Facebook, Twitter, Instagram } from "lucide-react"
-import dynamic from "next/dynamic"
+"use client";
+import Link from "next/link";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Linkedin,
+  Facebook,
+  Twitter,
+  Instagram,
+} from "lucide-react";
+import dynamic from "next/dynamic";
 
 // Import the map component with no SSR
 const GoogleMapWithNoSSR = dynamic(() => import("@/components/google-map"), {
   ssr: false,
-})
+});
 
 export default function ContactInfo() {
   return (
     <div className="rounded-lg bg-white p-8 shadow-lg">
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-black md:text-3xl">Contact Information</h2>
+        <h2 className="text-2xl font-bold text-black md:text-3xl">
+          Contact Information
+        </h2>
         <div className="mt-2 h-1 w-20 bg-red-600"></div>
       </div>
 
@@ -22,7 +34,9 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="font-medium text-gray-900">Our Location</h3>
-            <p className="text-sm text-gray-600">123 Business Avenue, Tech Park, Hyderabad, India</p>
+            <p className="text-sm text-gray-600">
+              123 Business Avenue, Tech Park, Hyderabad, India
+            </p>
           </div>
         </div>
 
@@ -52,7 +66,9 @@ export default function ContactInfo() {
           </div>
           <div>
             <h3 className="font-medium text-gray-900">Working Hours</h3>
-            <p className="text-sm text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM</p>
+            <p className="text-sm text-gray-600">
+              Monday - Friday: 9:00 AM - 6:00 PM
+            </p>
           </div>
         </div>
       </div>
@@ -99,6 +115,5 @@ export default function ContactInfo() {
         <GoogleMapWithNoSSR />
       </div>
     </div>
-  )
+  );
 }
-
