@@ -1,10 +1,11 @@
-import { Button } from "@/components/ui/button"
-import dynamic from "next/dynamic"
+"use client";
+import { Button } from "@/components/ui/button";
+import dynamic from "next/dynamic";
 
 // Import the map component with no SSR
 const GoogleMapWithNoSSR = dynamic(() => import("@/components/google-map"), {
   ssr: false,
-})
+});
 
 export default function LetsDiscuss() {
   return (
@@ -18,8 +19,8 @@ export default function LetsDiscuss() {
               Your <span className="text-red-600">Project!</span>
             </h2>
             <p className="mb-8 max-w-md text-base text-gray-700">
-              Share your project idea and we'll provide a free consultation on how we will turn it into an amazing
-              digital product.
+              Share your project idea and we'll provide a free consultation on
+              how we will turn it into an amazing digital product.
             </p>
             <Button className="w-full rounded-full bg-red-600 py-6 text-base font-medium hover:bg-red-700 md:max-w-xs">
               GET A QUOTE
@@ -35,6 +36,5 @@ export default function LetsDiscuss() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
